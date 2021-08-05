@@ -1,2 +1,2 @@
 # game3-wordpress
-game3のwordpressのDockerfile
+game3で用いているwordpressのDockerfile
