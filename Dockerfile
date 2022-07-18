@@ -2,7 +2,7 @@ FROM wordpress:6.0.1-php7.4-fpm-alpine
 
 RUN apk add --update --no-cache sudo gmp-dev zlib-dev libpng-dev libjpeg-turbo-dev freetype-dev libzip-dev && \
   #もともとベースイメージに入ってるコンフィグをカスタマイズ
-  docker-php-ext-configure gd --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ --with-freetype-dir=/usr/include/ && \
+  docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/ && \
   docker-php-ext-install gd gmp zip mysqli pdo_mysql && \
   docker-php-source delete && \
   sed -e "s/xfs:x:33/xfs:x:82/" -e "s/www-data:x:82/www-data:x:33/" -i /etc/group && \
