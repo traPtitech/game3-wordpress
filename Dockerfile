@@ -1,4 +1,4 @@
-FROM wordpress:5.2.3-php7.3-fpm-alpine
+FROM wordpress:5.2.14-php7.3-fpm-alpine
 
 RUN apk add --update --no-cache sudo gmp-dev zlib-dev libpng-dev libjpeg-turbo-dev freetype-dev libzip-dev && \
   #もともとベースイメージに入ってるコンフィグをカスタマイズ
