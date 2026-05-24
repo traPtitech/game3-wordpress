@@ -1,4 +1,4 @@
-FROM wordpress:6.6.2-php8.1-fpm-alpine
+FROM wordpress:6.9.4-php8.5-fpm-alpine
 
 RUN apk add --update --no-cache sudo gmp-dev zlib-dev libpng-dev libjpeg-turbo-dev freetype-dev libzip-dev && \
   #もともとベースイメージに入ってるコンフィグをカスタマイズ
